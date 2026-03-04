@@ -1,22 +1,5 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-  },
-  extends: ["plugin:react/recommended", "airbnb"],
-  globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly",
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 2018,
-    sourceType: "module",
-  },
-  parser: "@babel/eslint-parser",
-  plugins: ["react"],
+  extends: ["react-app", "react-app/jest"],
   rules: {
     "import/extensions": 0,
     "react/prop-types": 0,
@@ -24,13 +7,7 @@ module.exports = {
     "react/state-in-constructor": 0,
     "import/prefer-default-export": 0,
     "max-len": [2, 550],
-    "no-multiple-empty-lines": [
-      "error",
-      {
-        max: 1,
-        maxEOF: 1,
-      },
-    ],
+    "no-multiple-empty-lines": 0,
     "no-underscore-dangle": [
       "error",
       {
